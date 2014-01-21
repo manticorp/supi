@@ -1,0 +1,212 @@
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#debug {
+    display:none;
+}
+   
+body {
+    padding-bottom: 20px;
+}
+
+#location-button svg {
+    margin-top: 2px;
+    margin-bottom: -3px;
+}
+
+.location-circle {
+    fill: #fff; 
+}
+
+#weatherDisplay {
+    text-align: center;
+}
+
+footer {
+    padding: 18px 0;
+    text-align: center;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+@keyframes myfirst
+{
+    from {box-shadow: 0px 0px 7px red;}
+    to {box-shadow: none;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    from {box-shadow: 0px 0px 7px red;}
+    to {box-shadow: none;}
+}
+
+.highlight {
+    animation: myfirst 3s;
+    -webkit-animation: myfirst 3s; /* Safari and Chrome */
+}
+
+.header {
+    h1 {
+        a {
+            font-size: 2em;
+            font-family: 'Poiret One', cursive;
+            color: rgba(0,0,0,0.8);
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.2);
+        }
+    }
+    h2 {
+        font-size: 1.4em;
+        color: rgba(0,0,0,0.8);
+    }
+}
+
+.loading-gif {
+    margin: 0 0 12px 0;
+}
+
+#map-canvas {
+    margin-bottom: 18px;
+}
+
+@media (max-width: @screen-lg-min) {
+    .header {
+        margin: 0;
+        padding: 0;
+        h1 {
+            background: rgba(0,255,180,0.5);
+            width: 100%;
+            font-size: 3em;
+            padding: 2px 0 6px;
+            margin: 0;
+            a {
+            }
+        }
+        h2 {
+            margin: 0;
+            padding: 8px 0;
+            color: rgba(0,0,0,0.6);
+            background: rgba(0,255,180,0.65);
+            font-weight: 100;
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.2);
+        }
+    }
+    
+    #city-name {
+        margin: 0;
+        font-size: 1.2em;
+        color: rgba(0,0,0,0.7);
+        padding: 6px 0 6px;
+        background: rgba(0,255,180,1);
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .second-header {
+        margin: 0;
+        padding: 1px 0 8px;
+        background: rgba(0,255,180,1);
+    }
+}
+
+#weatherDisplay {
+    .hotter div[class*="col"].temp  {
+        background:     -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(234,209,126,0.7)), color-stop(1%,rgba(232,209,127,0.7)), color-stop(75%,rgba(0,255,180,1)), color-stop(100%,rgba(0,255,180,1))); /* Chrome,Safari4+ */
+        background:    -moz-radial-gradient(center, ellipse cover,  rgba(234,209,126,0.7) 0%,rgba(232,209,127,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* FF3.6+ */
+        background: -webkit-radial-gradient(center, ellipse cover,  rgba(234,209,126,0.7) 0%,rgba(232,209,127,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* Chrome10+,Safari5.1+ */
+        background:      -o-radial-gradient(center, ellipse cover,  rgba(234,209,126,0.7) 0%,rgba(232,209,127,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* Opera 12+ */
+        background:     -ms-radial-gradient(center, ellipse cover,  rgba(234,209,126,0.7) 0%,rgba(232,209,127,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* IE10+ */
+        background:         radial-gradient(ellipse at center,      rgba(234,209,126,0.7) 0%,rgba(232,209,127,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ead17e', endColorstr='#00ffb4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    .colder div[class*="col"].temp {
+        background:     -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(130,236,242,0.7)), color-stop(1%,rgba(129,236,241,0.7)), color-stop(99%,rgba(0,255,180,0.01)), color-stop(100%,rgba(0,255,180,0))); /* Chrome,Safari4+ */
+        background:    -moz-radial-gradient(center, ellipse cover,  rgba(130,236,242,0.8) 0%,rgba(129,236,241,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* FF3.6+ */
+        background: -webkit-radial-gradient(center, ellipse cover,  rgba(130,236,242,0.8) 0%,rgba(129,236,241,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* Chrome10+,Safari5.1+ */
+        background:      -o-radial-gradient(center, ellipse cover,  rgba(130,236,242,0.8) 0%,rgba(129,236,241,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* Opera 12+ */
+        background:     -ms-radial-gradient(center, ellipse cover,  rgba(130,236,242,0.8) 0%,rgba(129,236,241,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* IE10+ */
+        background:         radial-gradient(ellipse at center,      rgba(130,236,242,0.8) 0%,rgba(129,236,241,0.7) 1%,rgba(0,255,180,0) 75%,rgba(0,255,180,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b382ecf2', endColorstr='#0000ffb4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    }
+    .row {
+        padding: 0 18px;
+        &.today {
+            background: rgba(0,255,180,0.5);
+        }
+        &.tomorrow {
+            background: rgba(0,255,180,1);
+        }
+        &.title {
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.2);
+            h2 {
+                a {
+                    color: rgba(0,0,0,0.8);
+                    display: inline-block;
+                    padding-bottom: 3px;
+                    border-bottom: 1px dotted rgba(0,0,0,0.3);
+                    &:hover {
+                        text-decoration: none;
+                    border-bottom: 1px dotted rgba(0,0,0,0);
+                    }
+                }
+            }
+            &.today {
+            
+            }
+            &.tomorrow {
+            
+            }
+        }
+        &.summary {
+            color: rgba(0,0,0,0.5);
+            font-size: 1.1em;
+            &.today {
+            
+            }
+            &.tomorrow {
+            
+            }
+        }
+        &.result {
+            padding-bottom: 18px;
+            h3 {
+                text-shadow: -1px -1px 1px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.2);
+            }
+            &.today {
+            
+            }
+            &.tomorrow {
+            
+            }
+            p {
+                color: rgba(0,0,0,0.7);
+            }
+            div[class*="col"] {
+                border-top: 1px solid rgba(0,0,0,0.2);
+                &.wind {
+                    @media (min-width: @screen-sm-min) {
+                        border-right: 1px solid rgba(0,0,0,0.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
