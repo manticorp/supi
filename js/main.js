@@ -84,8 +84,6 @@ function displayWeather(weather){
     var today = $('<div class="col-md-12 col-lg-6">');
     var tomorrow = $('<div class="col-md-12 col-lg-6">');
     
-    console.log(units);
-    
     // TODAY
     // wind and temp diffs
     var windDiff = compareWind(weather.today.averageWindSpeed, weather.yesterday.averageWindSpeed);

@@ -174,13 +174,17 @@ function getWeatherFromPostcode(postcode, callback) {
 function compareTemperature(a, b, unit){
     if(typeof unit === "undefined") unit = "si";
     var tempa, tempb;
-    console.log(unit);
-    if(units[unit]['temp'] == "&deg;C"){
-        var tempa = CtoK(a);
-        var tempb = CtoK(b);
-    } else if (units[unit]['temp'] == "&deg;f"){
-        var tempa = FtoK(a);
-        var tempb = FtoK(b);
+    if(typeof units[unit] !== "undefined"){
+        if(units[unit]['temp'] == "&deg;C"){
+            var tempa = CtoK(a);
+            var tempb = CtoK(b);
+        } else if (units[unit]['temp'] == "&deg;f"){
+            var tempa = FtoK(a);
+            var tempb = FtoK(b);
+        } else {
+            var tempa = a;
+            var tempb = b;
+        }
     } else {
         var tempa = a;
         var tempb = b;
