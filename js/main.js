@@ -53,6 +53,12 @@ var units = {
         windMultiplier: 2.2,
         tempMultiplier: 1
     },
+    uk2: {
+        wind: "mph",
+        temp: "&deg;C",
+        windMultiplier: 2.2,
+        tempMultiplier: 1
+    },
     ca: {
         wind: "kph",
         temp: "&deg;C",
@@ -78,6 +84,7 @@ function displayWeather(weather){
     var today = $('<div class="col-md-12 col-lg-6">');
     var tomorrow = $('<div class="col-md-12 col-lg-6">');
     
+    console.log(units);
     
     // TODAY
     // wind and temp diffs

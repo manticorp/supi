@@ -174,6 +174,7 @@ function getWeatherFromPostcode(postcode, callback) {
 function compareTemperature(a, b, unit){
     if(typeof unit === "undefined") unit = "si";
     var tempa, tempb;
+    console.log(unit);
     if(units[unit]['temp'] == "&deg;C"){
         var tempa = CtoK(a);
         var tempb = CtoK(b);
