@@ -126,6 +126,24 @@ var units = {
         windSpeed: "mph",
         visibility: "mi"
     },
+    uk2: {
+        wind: "mph",
+        temp: "&deg;C",
+        windMultiplier: 2.2,
+        tempMultiplier: 1,
+        pressure: "hPa",
+        nearestStormDistance: "km",
+        precipIntensity: "mm/h",
+        precipIntensityMax: "mm/h",
+        precipAccumulation: "cm",
+        temperature: "&deg;C",
+        temperatureMin: "&deg;C",
+        temperatureMax: "&deg;C",
+        apparentTemperature: "&deg;C",
+        dewPoint: "&deg;C",
+        windSpeed: "mph",
+        visibility: "mi"
+    },
     ca: {
         wind: "kph",
         temp: "&deg;C",
