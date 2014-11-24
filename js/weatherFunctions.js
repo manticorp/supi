@@ -13,7 +13,7 @@ function getWeather(lat, lon, callback) {
     times.tomorrow.setDate(times.today.getDate()+1);
     $.when( 
         $.ajax({
-            url:"getWeather.php", 
+            url:"http://supiapi.hmp.is.it", 
             type: 'POST',
             dataType: 'json',
             data: { 
@@ -23,7 +23,7 @@ function getWeather(lat, lon, callback) {
             }
         }), 
         $.ajax({
-            url:"getWeather.php", 
+            url:"http://supiapi.hmp.is.it", 
             type: 'POST',
             dataType: 'json',
             data: { 
@@ -33,7 +33,7 @@ function getWeather(lat, lon, callback) {
             }
         }), 
         $.ajax({
-            url:"getWeather.php", 
+            url:"http://supiapi.hmp.is.it", 
             type: 'POST',
             dataType: 'json',
             data: { 
@@ -147,7 +147,7 @@ function getWeatherFromPostcode(postcode, callback) {
     userLocation.city = postcode;
     resetResults();
     $.ajax({
-        url:"getAddress.php", 
+        url:"http://supiapi.hmp.is.it/address.php", 
         type: 'POST',
         dataType: 'json',
         data: { 
