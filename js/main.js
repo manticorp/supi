@@ -24,10 +24,8 @@ function postcodeGetSubmit(){
 }
 
 // Once DOM has loaded, start the weather processing!
-jQuery().ready(function() {
-    if(document.URL.indexOf("#debug") != -1){
+$(function() {
         $('#debug').css('display','block');
-    }
     console.log('Starting app...');
     console.log('Connection type: ' + checkConnection());
     getWeatherFromLocation(displayWeather);
