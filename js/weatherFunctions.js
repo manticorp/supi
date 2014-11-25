@@ -111,7 +111,7 @@ function storeLocation(position, callback) {
  */
 function resetResults(){
     $('#weatherDisplay').slideUp(0);
-    $('#weatherDisplay').html('<img class="loading-gif" src="img/loading/simple/11.gif" />');
+    $('#weatherDisplay').html('<div class="loading-spinner"></div>');
     $('#weatherDisplay').slideDown(500);
     $('#map-canvas').css('min-height',0);
 }

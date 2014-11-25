@@ -103,7 +103,7 @@ function displayWeather(weather){
         .append('<h5 class="numeric">Low: ' + twoDP(weather.today.temperatureMin) + ' ' + units[weather.today.units]["temp"] + ' High: ' + twoDP(weather.today.temperatureMax) + ' ' + units[weather.today.units]["temp"] + '</h5>')
         .append('<p>' + tempDiff.text + " yesterday (" + addSign(twoDP(tempDiff.diff)) + " " + units[weather.today.units]["temp"] + ")</p>");
     
-    var todayTitleRow = $('<div class="row today title">').append($('<div class="col-md-12"><h2><a href="today.php" alt="Today\'s Weather" title="Today\'s Weather">Today</a></h2></div>'))
+    var todayTitleRow = $('<div class="row today title">').append($('<div class="col-md-12"><h2><a href="today.html" alt="Today\'s Weather" title="Today\'s Weather">Today</a></h2></div>'))
         .append('<canvas id="icon-today" width="' + iconSize + '" height="' + iconSize + '"></canvas>');
     var todaySummaryRow = $('<div class="row today summary">').append($('<div class="col-md-12">').append($('<p>' + weather.today.summary + '</p>')));
     var todayResultRow = $('<div class="row today result">').append(wind).append(temp);
@@ -133,7 +133,7 @@ function displayWeather(weather){
         .append('<h5 class="numeric">Low: ' + twoDP(weather.tomorrow.temperatureMin) + ' ' + units[weather.tomorrow.units]["temp"] + ' High: ' + twoDP(weather.tomorrow.temperatureMax) + ' ' + units[weather.tomorrow.units]["temp"] + '</h5>')
         .append("<p>" + tempDiff.text + " today (" + addSign(twoDP(tempDiff.diff)) + " " + units[weather.tomorrow.units]["temp"] + ")</p>");
     
-    var tomorrowTitleRow = $('<div class="row tomorrow title">').append($('<div class="col-md-12"><h2><a href="tomorrow.php" alt="Tomorrows Weather" title="Tomorrow\'s Weather">Tomorrow</a></h2></div>'))
+    var tomorrowTitleRow = $('<div class="row tomorrow title">').append($('<div class="col-md-12"><h2><a href="tomorrow.html" alt="Tomorrows Weather" title="Tomorrow\'s Weather">Tomorrow</a></h2></div>'))
         .append('<canvas id="icon-tomorrow" width="' + iconSize + '" height="' + iconSize + '"></canvas>');
     var tomorrowSummaryRow = $('<div class="row tomorrow summary">').append($('<div class="col-md-12">').append($('<p>' + weather.tomorrow.summary + '</p>')));
     var tomorrowResultRow = $('<div class="row tomorrow result">').append(wind).append(temp);
