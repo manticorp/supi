@@ -122,8 +122,9 @@ function resetResults(){
 function getWeatherFromLocation(callback) {
     console.log('Getting weather from location');
    var options = {
-      timeout: 1000,
-      maximumAge: 1000*60*10
+      timeout: 15000,
+      maximumAge: 1000*60*10,
+      enableHighAccuracy:true
     };
     if (navigator.geolocation){
         resetResults();
