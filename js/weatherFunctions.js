@@ -79,6 +79,9 @@ function getCityFromLatLng(lat, lon, callback){
 function locationError(err) {
     $('#weatherDisplay').html('<div class="col-xs-12"><div class="alert alert-info">Your location could not be determined, please either allow geolocation or type and address below.</div></div>');
     console.error('ERROR(' + err.code + '): ' + err.message);
+    console.warn(err);
+    console.log(err);
+    console.error(err);
 };
 
 /**
