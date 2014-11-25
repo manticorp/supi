@@ -28,6 +28,7 @@ jQuery().ready(function() {
     if(document.URL.indexOf("#debug") != -1){
         $('#debug').css('display','block');
     }
+    console.log('Starting app...');
     getWeatherFromLocation(displayWeather);
 });
 
