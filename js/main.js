@@ -29,6 +29,7 @@ jQuery().ready(function() {
         $('#debug').css('display','block');
     }
     console.log('Starting app...');
+    console.log('Connection type: ' + checkConnection());
     getWeatherFromLocation(displayWeather);
 });
 
