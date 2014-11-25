@@ -120,6 +120,7 @@ function resetResults(){
  * Gets the weather using W3C geo info.
  */
 function getWeatherFromLocation(callback) {
+    console.log('Getting weather from location');
    var options = {
       timeout: 5000,
       maximumAge: 0
